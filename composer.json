@@ -1,0 +1,25 @@
+{
+  "name": "websight/ws-textmedia-bootstrap",
+  "description": "Text & Media Pre styled for Bootstrap",
+  "type": "typo3-cms-extension",
+  "license": "GPL3",
+  "authors": [
+    {
+      "name": "Cedric Ziel",
+      "email": "ziel@websight.de"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "fluidtypo3/vhs": "*"
+  },
+  "replace": {
+    "ws_textmedia_bootstrap": "self.version",
+    "typo3-ter/ws-textmedia-bootstrap": "self.version"
+  },
+  "autoload": {
+    "psr-4": {
+      "Websight\\WsTextmediaBootstrap\\": "Classes/"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+			xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<f:if condition="{gallery.rows}">
+	<v:variable.set name="colClass" value="{v:math.division(a: '12', b: '{gallery.count.columns}') -> v:math.floor()}"/>
+		<f:for each="{gallery.rows}" as="row">
+			<div class="row">
+				<f:for each="{row.columns}" as="column">
+					<f:if condition="{column.media}">
+						<div class="col-md-{colClass} ce-gallery-col">
+							<f:if condition="{column.media.description}">
+								<f:then>
+									<figure class="img-responsive ce-gallery-item center-block">
+								</f:then>
+							</f:if>
+
+							<f:switch expression="{column.media.type}">
+								<f:case value="3">
+									<f:render section="audioType" arguments="{_all}" />
+								</f:case>
+								<f:case value="4">
+									<f:render section="videoType" arguments="{_all}" />
+								</f:case>
+								<f:case default="TRUE">
+									<f:render section="imageType" arguments="{_all}" />
+								</f:case>
+							 </f:switch>
+
+							<f:if condition="{column.media.description}">
+								<f:then>
+										<figcaption>
+											{column.media.description}
+										</figcaption>
+									</figure>
+								</f:then>
+							</f:if>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</f:for>
+</f:if>
+
+<f:section name="imageType">
+	<f:if condition="{column.media.link}">
+		<f:then>
+			<f:link.typolink parameter="{column.media.link}">
+				<f:render section="media" arguments="{_all}" />
+			</f:link.typolink>
+		</f:then>
+		<f:else>
+			<f:if condition="{data.image_zoom}">
+				<f:then>
+					<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
+						<f:render section="media" arguments="{_all}" />
+					</ce:link.clickEnlarge>
+				</f:then>
+				<f:else>
+					<f:render section="media" arguments="{_all}" />
+				</f:else>
+			</f:if>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="audioType">
+	<f:render section="media" arguments="{_all}" />
+</f:section>
+
+<f:section name="videoType">
+	<f:render section="media" arguments="{_all}" />
+</f:section>
+
+<f:section name="media">
+	<f:media
+		file="{column.media}"
+		width="{column.dimensions.width}"
+		height="{column.dimensions.height}"
+		alt="{column.media.alternative}"
+		title="{column.media.title}"
+		class="img-responsive ce-gallery-item center-block"
+	/>
+</f:section>
+</html>

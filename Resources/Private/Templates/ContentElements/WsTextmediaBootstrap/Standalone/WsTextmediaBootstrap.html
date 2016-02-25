@@ -1,0 +1,121 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
+			xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<v:variable.set name="colSpanTextMedium" value="{data.ws_textmedia_bootstrap_text_size}"/>
+<v:variable.set name="colSpanImageMedium" value="{data.ws_textmedia_bootstrap_image_size}"/>
+
+<div id="c{data.uid}" class="row" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+	<div class="col-md-12">
+		<f:render partial="Header" arguments="{_all}"/>
+	</div>
+</div>
+<f:switch expression="{data.imageorient}">
+	<f:comment>
+		Above
+	</f:comment>
+	<f:case value="0">
+		<div class="row">
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</div>
+	</f:case>
+	<f:comment>
+		Below
+	</f:comment>
+	<f:case value="8">
+		<div class="row">
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+		</div>
+	</f:case>
+	<f:comment>
+		In Text right
+		- Unsupported. Override if needed.
+	</f:comment>
+	<f:case value="17">
+		<div class="row">
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+		</div>
+	</f:case>
+	<f:comment>
+		In Text left
+		- Unsupported. Override if needed.
+	</f:comment>
+	<f:case value="18">
+		<div class="row">
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</div>
+	</f:case>
+	<f:comment>
+		Besides Text right
+	</f:comment>
+	<f:case value="25">
+		<div class="row">
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+		</div>
+	</f:case>
+	<f:comment>
+		Besides Text left
+	</f:comment>
+	<f:case value="26">
+		<div class="row">
+			<div class="col-md-{colSpanImageMedium} ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+			<div class="col-md-{colSpanTextMedium} ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+		</div>
+	</f:case>
+	<f:case default="TRUE">
+		<div class="row">
+			<div class="col-md-8 ce-gallery-bodytext">
+				<f:format.html>{data.bodytext}</f:format.html>
+			</div>
+			<div class="col-md-4 ce-gallery-gallery-col">
+				<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
+			</div>
+		</div>
+	</f:case>
+</f:switch>
+<f:if condition="{data.linkToTop}">
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				<ce:link.section name="top">
+					<f:translate key="toTop" extensionName="fluid_styled_content"/>
+				</ce:link.section>
+			</p>
+		</div>
+	</div>
+</f:if>
+</html>

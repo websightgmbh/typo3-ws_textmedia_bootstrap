@@ -1,0 +1,18 @@
+lib.fluidContent {
+    templateRootPaths {
+        100 = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Replace/
+    }
+    partialRootPaths {
+        100 = EXT:ws_textmedia_bootstrap/Resources/Private/Partials/ContentElements/WsTextmediaBootstrap/
+    }
+}
+
+tt_content.textmedia {
+    dataProcessing {
+        30 = Websight\WsTextmediaBootstrap\DataProcessing\GridProcessor
+        30 {
+            # By default bootstrap uses a 12 column grid. Adjust if needed.
+            bootstrap_grid_size = 12
+        }
+    }
+}

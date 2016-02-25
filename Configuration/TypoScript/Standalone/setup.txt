@@ -1,0 +1,20 @@
+tt_content {
+    wstextmediabootstrap =< tt_content.textmedia
+    wstextmediabootstrap {
+        templateName = WsTextmediaBootstrap
+        templateRootPaths {
+            0 = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Standalone/
+            10 = {$plugin.ws_textmedia_bootstrap.templates.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:fluid_styled_content/Resources/Private/Partials/
+            10 = EXT:ws_textmedia_bootstrap/Resources/Private/Partials/ContentElements/WsTextmediaBootstrap/
+            20 = {$plugin.ws_textmedia_bootstrap.templates.partialRootPath}
+        }
+        layoutRootPaths {
+            0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+            10 = {$styles.templates.layoutRootPath}
+            20 = {$plugin.ws_textmedia_bootstrap.templates.layoutRootPath}
+        }
+    }
+}

@@ -1,0 +1,3 @@
+plugin.ws_textmedia_bootstrap.templates.templateRootPath = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Standalone/
+plugin.ws_textmedia_bootstrap.templates.partialRootPath = EXT:ws_textmedia_bootstrap/Resources/Private/Partials/ContentElements/WsTextmediaBootstrap/
+plugin.ws_textmedia_bootstrap.templates.layoutRootPath =

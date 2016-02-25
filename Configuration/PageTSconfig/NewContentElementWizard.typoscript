@@ -1,0 +1,15 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ws_textmedia_bootstrap/Configuration/PageTSconfig/TCEFORM.typoscript">
+
+mod.wizards.newContentElement.wizardItems {
+    common.elements {
+        wstextmediabootstrap {
+            iconIdentifier = content-textpic
+            title = Text mit Medien - 2cols - 2text - 1image
+            description = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:common_textMedia_description
+            tt_content_defValues {
+                CType = wstextmediabootstrap
+                imageorient = 17
+            }
+        }
+    }
+}
