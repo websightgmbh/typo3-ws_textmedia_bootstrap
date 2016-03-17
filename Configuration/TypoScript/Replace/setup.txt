@@ -13,6 +13,22 @@ tt_content.textmedia {
         30 {
             # By default bootstrap uses a 12 column grid. Adjust if needed.
             bootstrap_grid_size = 12
+            # Wrap every content element with it's UID
+            wrap_element_uid = 0
         }
     }
 }
+
+plugin.ws_textmedia_bootstrap._CSS_DEFAULT_STYLE (
+    .ce-bodytext.ce-intext {
+        float: none;
+    }
+    .ce-gallery.ce-intext.ce-right {
+        float: right;
+        z-index: 999;
+    }
+    .ce-gallery.ce-intext.ce-left {
+        float: left;
+        z-index: 999;
+    }
+)

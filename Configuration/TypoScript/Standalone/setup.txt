@@ -18,3 +18,17 @@ tt_content {
         }
     }
 }
+
+plugin.ws_textmedia_bootstrap._CSS_DEFAULT_STYLE (
+    .ce-bodytext.ce-intext {
+        float: none;
+    }
+    .ce-gallery.ce-intext.ce-right {
+        float: right;
+        z-index: 999;
+    }
+    .ce-gallery.ce-intext.ce-left {
+        float: left;
+        z-index: 999;
+    }
+)
