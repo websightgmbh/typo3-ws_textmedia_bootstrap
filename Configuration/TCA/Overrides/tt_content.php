@@ -5,7 +5,7 @@ call_user_func(function () {
     $languageFilePrefix = 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.';
 
     $textMediaElementNames = [
-        'wstextmediabootstrap' => 'Text & Media: Bootstrap',
+        'wstextmediabootstrap' => 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.ce_wizard.title',
     ];
 
     foreach ($textMediaElementNames as $element => $label) {
@@ -46,71 +46,11 @@ call_user_func(function () {
     $GLOBALS['TCA']['tt_content']['palettes']['gridSettings'] = [
         'showitem' => '
             ,--div--;Grid,
-            ws_textmedia_bootstrap_text_size;' . $languageFilePrefix . 'col.ws_textmedia_bootstrap_text_size,
             ws_textmedia_bootstrap_image_size;' . $languageFilePrefix . 'col.ws_textmedia_bootstrap_image_size,
         '
     ];
 
     $ttContentColumns = [
-        'ws_textmedia_bootstrap_text_size'  => [
-            'exclude' => 1,
-            'label'   => $languageFilePrefix . 'col.ws_textmedia_bootstrap_image_size',
-            'config'  => [
-                'type'       => 'select',
-                'renderType' => 'selectSingle',
-                'items'      => [
-                    [
-                        '1 Column',
-                        '1'
-                    ],
-                    [
-                        '2 Columns',
-                        '2'
-                    ],
-                    [
-                        '3 Columns',
-                        '3'
-                    ],
-                    [
-                        '4 Columns',
-                        '4'
-                    ],
-                    [
-                        '5 Columns',
-                        '5'
-                    ],
-                    [
-                        '6 Columns',
-                        '6'
-                    ],
-                    [
-                        '7 Columns',
-                        '7'
-                    ],
-                    [
-                        '8 Columns',
-                        '8'
-                    ],
-                    [
-                        '9 Columns',
-                        '9'
-                    ],
-                    [
-                        '10 Columns',
-                        '10'
-                    ],
-                    [
-                        '11 Columns',
-                        '11'
-                    ],
-                    [
-                        '12 Columns',
-                        '12'
-                    ],
-                ],
-                'default'    => 6
-            ]
-        ],
         'ws_textmedia_bootstrap_image_size' => [
             'exclude' => 1,
             'label'   => $languageFilePrefix . 'col.ws_textmedia_bootstrap_image_size',
@@ -119,51 +59,55 @@ call_user_func(function () {
                 'renderType' => 'selectSingle',
                 'items'      => [
                     [
-                        '1 Column',
+                        '',
+                        '0'
+                    ],
+                    [
+                        '1/12',
                         '1'
                     ],
                     [
-                        '2 Columns',
+                        '2/12',
                         '2'
                     ],
                     [
-                        '3 Columns',
+                        '3/12 (25%)',
                         '3'
                     ],
                     [
-                        '4 Columns',
+                        '4/12',
                         '4'
                     ],
                     [
-                        '5 Columns',
+                        '5/12',
                         '5'
                     ],
                     [
-                        '6 Columns',
+                        '6/12 (50%)',
                         '6'
                     ],
                     [
-                        '7 Columns',
+                        '7/12',
                         '7'
                     ],
                     [
-                        '8 Columns',
+                        '8/12',
                         '8'
                     ],
                     [
-                        '9 Columns',
+                        '9/12 (75%)',
                         '9'
                     ],
                     [
-                        '10 Columns',
+                        '10/12',
                         '10'
                     ],
                     [
-                        '11 Columns',
+                        '11/12',
                         '11'
                     ],
                     [
-                        '12 Columns',
+                        '12/12 (100%)',
                         '12'
                     ],
                 ],

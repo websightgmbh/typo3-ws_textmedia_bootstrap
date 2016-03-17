@@ -6,22 +6,18 @@ Text & Media Element adaption for FluidStyledContent.
 
 This extensions will give you Fluid Styled Content Elements for
 Text with Media elements. Both a `standalone` element that adds a new element
-"Text & Media: Bootstrap" and a `replace` option are available.
+"Text & Media - Bootstrap" and a `replace` option are available.
 
 By default, the standalone variant will be placed in the new content 
 element wizard as well. Disable this behaviour in the extension manager.
 
-![Grid Sizes Palette](Documentation/palette.png)
+## Version 2.0.0
 
-## Remarks
-
-Just like the original "Text & Media" elemtent, this doesnt give you the
-ability to render images "in text". If you need these options, please
-override the partial `ContentElements/WsTextmediaBootstrap/BootstrapMediaGallery.html`
-and the appropriate template file for your case.
-
-The `in text left` and `in text right` options will default to the `besides`
-options.
+Major update, please regard these changes:
+- new class names in fluid_styled_content style
+- EXT:vhs not needed anymore
+- responsive videos now possible in gallery grid
+- setting the size of the bodytext column not necessary anymore, gets computed automatically
 
 ## License
 
