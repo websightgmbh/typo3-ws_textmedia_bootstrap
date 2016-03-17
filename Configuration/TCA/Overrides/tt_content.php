@@ -5,7 +5,7 @@ call_user_func(function () {
     $languageFilePrefix = 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.';
 
     $textMediaElementNames = [
-        'wstextmediabootstrap' => 'Text & Media: Bootstrap',
+        'wstextmediabootstrap' => 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.ce_wizard.title',
     ];
 
     foreach ($textMediaElementNames as $element => $label) {

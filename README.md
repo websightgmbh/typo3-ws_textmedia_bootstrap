@@ -6,7 +6,7 @@ Text & Media Element adaption for FluidStyledContent.
 
 This extensions will give you Fluid Styled Content Elements for
 Text with Media elements. Both a `standalone` element that adds a new element
-"Text & Media: Bootstrap" and a `replace` option are available.
+"Text & Media - Bootstrap" and a `replace` option are available.
 
 By default, the standalone variant will be placed in the new content 
 element wizard as well. Disable this behaviour in the extension manager.

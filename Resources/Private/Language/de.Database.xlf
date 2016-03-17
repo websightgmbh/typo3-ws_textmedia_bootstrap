@@ -4,6 +4,10 @@
           date="2014-02-07T20:22:32Z" product-name="ws_textmedia_bootstrap">
         <header/>
         <body>
+            <trans-unit id="ws_textmedia_bootstrap.ce_wizard.title">
+                <source><![CDATA[Text & Media - Bootstrap]]></source>
+                <target><![CDATA[Text & Medien - Bootstrap]]></target>
+            </trans-unit>
             <trans-unit id="ws_textmedia_bootstrap.palette.grid_settings">
                 <source>Bootstrap Settings</source>
                 <target>Bootstrap-Einstellungen</target>
