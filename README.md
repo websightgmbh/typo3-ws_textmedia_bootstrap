@@ -11,6 +11,11 @@ Text with Media elements. Both a `standalone` element that adds a new element
 By default, the standalone variant will be placed in the new content 
 element wizard as well. Disable this behaviour in the extension manager.
 
+## Version 2.0.2
+
+* switch back to render images through the media ViewHelper to be able to use
+  custom renderers from the RendererRegistry
+
 ## Version 2.0.0
 
 Major update, please regard these changes:
