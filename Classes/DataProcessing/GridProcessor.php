@@ -65,12 +65,9 @@ class GridProcessor implements DataProcessorInterface
 
         $processorConfiguration = array_merge($this->defaultProcessorConfiguration, $processorConfiguration);
 
-        $textPositionVertical = $processedData['gallery']['position']['vertical'];
-        $textPositionHorizontal = $processedData['gallery']['position']['horizontal'];
-
         $imageColumnSize = (int)$processedData['data']['ws_textmedia_bootstrap_image_size'];
-        $imageColumnSizeLeftover = (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize;
-        $imageColumnSizeLeftoverHalf = floor($imageColumnSizeLeftover / 2);
+        $imageColumnSizeLeftover = ($imageColumnSize ? (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize : 0);
+        $imageColumnSizeLeftoverHalf = ($imageColumnSizeLeftover ? floor($imageColumnSizeLeftover / 2) : 0);
 
         $textColumnSize = (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize;
 
