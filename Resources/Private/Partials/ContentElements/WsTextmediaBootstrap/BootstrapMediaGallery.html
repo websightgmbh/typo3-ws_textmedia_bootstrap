@@ -84,11 +84,12 @@
 </f:section>
 
 <f:section name="image">
-	<f:image
-		src="{column.media.uid}"
-		treatIdAsReference="1"
-		title="{column.media.title}"
+	<f:media
+		file="{column.media}"
+		width="{column.dimensions.width}"
+		height="{column.dimensions.height}"
 		alt="{column.media.alternative}"
+		title="{column.media.title}"
 		class="img-responsive"
 	/>
 </f:section>
