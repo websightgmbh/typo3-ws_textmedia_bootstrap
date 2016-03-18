@@ -2,7 +2,9 @@
 			xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers"
 			data-namespace-typo3-fluid="true">
 
-<div id="c{data.uid}">
+<f:if condition="{grid.wrap_element_uid}">
+	<div id="c{data.uid}">
+</f:if>
 
 <f:render partial="Header" arguments="{_all}"/>
 
@@ -185,7 +187,9 @@
 	</f:else>
 </f:if>
 
-</div>
+<f:if condition="{grid.wrap_element_uid}">
+	</div>
+</f:if>
 
 <f:if condition="{data.linkToTop}">
 	<p>

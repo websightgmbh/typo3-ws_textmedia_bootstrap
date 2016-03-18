@@ -81,7 +81,8 @@ class GridProcessor implements DataProcessorInterface
                 'imagecol_offset_leftover_half' => ($imageColumnSizeLeftoverHalf > 0 ? ' col-md-offset-' . $imageColumnSizeLeftoverHalf : ''),
                 'gallerycol' => ($galleryColumnSize ? 'col-md-' . $galleryColumnSize : 'col-md-12')
             ],
-            'wrap_element_uid' => $processorConfiguration['wrap_element_uid']
+            'wrap_element_uid' => $processorConfiguration['wrap_element_uid'],
+            'max_image_width' => $processorConfiguration['max_image_width']
         ];
 
         return $processedData;

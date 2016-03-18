@@ -4,17 +4,26 @@ tt_content {
         templateName = WsTextmediaBootstrap
         templateRootPaths {
             0 = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Standalone/
-            10 = {$plugin.ws_textmedia_bootstrap.templates.templateRootPath}
+            10 = {$plugin.tx_ws_textmedia_bootstrap.templates.templateRootPath}
         }
         partialRootPaths {
             0 = EXT:fluid_styled_content/Resources/Private/Partials/
             10 = EXT:ws_textmedia_bootstrap/Resources/Private/Partials/ContentElements/WsTextmediaBootstrap/
-            20 = {$plugin.ws_textmedia_bootstrap.templates.partialRootPath}
+            20 = {$plugin.tx_ws_textmedia_bootstrap.templates.partialRootPath}
         }
         layoutRootPaths {
             0 = EXT:fluid_styled_content/Resources/Private/Layouts/
             10 = {$styles.templates.layoutRootPath}
-            20 = {$plugin.ws_textmedia_bootstrap.templates.layoutRootPath}
+            20 = {$plugin.tx_ws_textmedia_bootstrap.templates.layoutRootPath}
+        }
+
+        dataProcessing {
+            30 = Websight\WsTextmediaBootstrap\DataProcessing\GridProcessor
+            30 {
+                bootstrap_grid_size = {$plugin.tx_ws_textmedia_bootstrap.settings.bootstrap_grid_size}
+                wrap_element_uid = {$plugin.tx_ws_textmedia_bootstrap.settings.wrap_element_uid}
+                max_image_width = {$plugin.tx_ws_textmedia_bootstrap.settings.max_image_width}
+            }
         }
     }
 }
