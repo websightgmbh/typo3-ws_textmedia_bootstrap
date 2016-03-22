@@ -13,10 +13,10 @@ $EM_CONF[$_EXTKEY] = [
     'createDirs'       => '',
     'modify_tables'    => '',
     'clearCacheOnLoad' => 0,
-    'version'          => '2.0.2',
+    'version'          => '2.1.0',
     'constraints'      => [
         'depends'   => [
-            'typo3'                => '7.6.0-7.99.99',
+            'typo3' => '7.6.0-7.99.99',
             'fluid_styled_content' => '',
             'fluid_styled_responsive_images' => '',
         ],

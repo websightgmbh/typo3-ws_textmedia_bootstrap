@@ -11,6 +11,15 @@ Text with Media elements. Both a `standalone` element that adds a new element
 By default, the standalone variant will be placed in the new content 
 element wizard as well. Disable this behaviour in the extension manager.
 
+## Version 2.1.0
+
+* the extension depends on EXT:fluid_styled_responsive_images now to provide
+  automatic responsive images. The default configuration should match a standard
+  bootstrap 3 12 columns grid. For more information please have a look at
+  fluid-styled-responsive-images (Link: https://github.com/alexanderschnitzler/fluid-styled-responsive-images)
+
+* adjust templates
+
 ## Version 2.0.2
 
 * switch back to render images through the media ViewHelper to be able to use
