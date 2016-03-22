@@ -11,7 +11,10 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "fluidtypo3/vhs": "*"
+    "php": ">=5.5.0",
+    "typo3/cms": "~7.6.0",
+    "typo3/cms-fluid-styled-content": "*",
+    "schnitzler/fluid-styled-responsive-images": "*"
   },
   "replace": {
     "ws_textmedia_bootstrap": "self.version",
