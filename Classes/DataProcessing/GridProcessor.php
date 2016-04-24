@@ -71,6 +71,10 @@ class GridProcessor implements DataProcessorInterface
 
         $textColumnSize = (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize;
 
+        // Prevent division by zero
+        if ((int)$processedData['gallery']['count']['columns'] <= 0) {
+            $processedData['gallery']['count']['columns'] = 1;
+        }
         $galleryColumnSize = floor((int)$processorConfiguration['bootstrap_grid_size'] / $processedData['gallery']['count']['columns']);
 
         $processedData['grid'] = [
