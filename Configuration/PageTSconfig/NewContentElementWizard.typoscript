@@ -12,4 +12,5 @@ mod.wizards.newContentElement.wizardItems {
             }
         }
     }
+    common.show := addToList(wstextmediabootstrap)
 }

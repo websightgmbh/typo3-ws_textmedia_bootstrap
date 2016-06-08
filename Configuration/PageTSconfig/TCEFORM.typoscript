@@ -1,7 +1,4 @@
 TCEFORM.tt_content {
-    CType {
-	    keepItems := addToList(wstextmediabootstrap)
-    }
     imagewidth.disabled = 1
     imageheight.disabled = 1
 }
