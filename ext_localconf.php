@@ -17,14 +17,6 @@ if (TYPO3_MODE === 'BE') {
                 // Include new content elements to modWizards
                 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ws_textmedia_bootstrap/Configuration/PageTSconfig/NewContentElementWizard.typoscript">');
             }
-
-            $dispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-            $dispatcher->connect(
-                \TYPO3\CMS\Extensionmanager\Controller\ConfigurationController::class,
-                'afterExtensionConfigurationWrite',
-                \TYPO3\CMS\FluidStyledContent\Hooks\TcaCacheClearing::class,
-                'clearTcaCache'
-            );
         },
         $_EXTKEY
     );
