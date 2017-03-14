@@ -12,7 +12,7 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
-    "typo3/cms": "~7.6.0",
+    "typo3/cms": "~8.6.0",
     "typo3/cms-fluid-styled-content": "*",
     "schnitzler/fluid-styled-responsive-images": "*"
   },
