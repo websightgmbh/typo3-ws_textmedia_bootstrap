@@ -76,7 +76,7 @@
 <f:section name="media">
 	<f:media
 		file="{column.media}"
-		width="{grid.max_image_width}"
+		width="{f:if(condition:'{column.dimensions.width}', then:'{column.dimensions.width}', else:'{grid.max_image_width}')}"
 		alt="{column.media.alternative}"
 		title="{column.media.title}"
 	/>
@@ -85,7 +85,7 @@
 <f:section name="image">
 	<f:media
 		file="{column.media}"
-		width="{grid.max_image_width}"
+		width="{f:if(condition:'{column.dimensions.width}', then:'{column.dimensions.width}', else:'{grid.max_image_width}')}"
 		alt="{column.media.alternative}"
 		title="{column.media.title}"
 		class="img-responsive"
