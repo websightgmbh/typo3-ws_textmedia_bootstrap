@@ -167,6 +167,7 @@
 							<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
 						</div>
 						<div class="{grid.classes.textcol} ce-bodytext">
+                            <f:render partial="Header/All" arguments="{_all}" />
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 					</div>
@@ -176,6 +177,7 @@
 				<div class="ce-textpic">
 					<div class="row">
 						<div class="col-md-8 ce-bodytext">
+                            <f:render partial="Header/All" arguments="{_all}" />
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 						<div class="col-md-4 ce-gallery{f:if(condition: data.imageborder, then: ' ce-border')} ce-besidetext ce-right" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
