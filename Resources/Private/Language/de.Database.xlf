@@ -12,21 +12,9 @@
                 <source>Bootstrap Settings</source>
                 <target>Bootstrap-Einstellungen</target>
             </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_xs">
-                <source>Gallery Size XS (Extra small devices (phones, less than 768px)</source>
-                <target>Galerie-Breite XS (Smartphones)</target>
-            </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_sm">
-                <source>Gallery Size SM (Small devices (tablets, 768px and up))</source>
-                <target>Galerie-Breite SM (Tablets)</target>
-            </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_md">
-                <source>Gallery Size MD (Medium devices (desktops, 992px and up))</source>
-                <target>Galerie-Breite MD (Desktop-PCs)</target>
-            </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_lg">
-                <source>Gallery Size LG(Large devices (large desktops, 1200px and up))</source>
-                <target>Galerie-Breite LG (Desktop-PCs große Geräte)</target>
+            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size">
+                <source>Gallery Size</source>
+                <target>Galerie-Breite</target>
             </trans-unit>
         </body>
     </file>

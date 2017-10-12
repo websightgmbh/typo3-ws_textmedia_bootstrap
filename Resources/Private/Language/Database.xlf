@@ -10,19 +10,9 @@
             <trans-unit id="ws_textmedia_bootstrap.palette.grid_settings">
                 <source>Bootstrap Settings</source>
             </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_xs">
-                <source>Gallery Size XS (Extra small devices (phones, less than 768px)</source>
+            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size">
+                <source>Gallery Size</source>
             </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_sm">
-                <source>Gallery Size SM (Small devices (tablets, 768px and up))</source>
-            </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_md">
-                <source>Gallery Size MD (Medium devices (desktops, 992px and up))</source>
-            </trans-unit>
-            <trans-unit id="ws_textmedia_bootstrap.col.ws_textmedia_bootstrap_image_size_lg">
-                <source>Gallery Size LG (Large devices (large desktops, 1200px and up))</source>
-            </trans-unit>
-
         </body>
     </file>
 </xliff>
