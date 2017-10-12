@@ -1,4 +1,4 @@
-lib.fluidContent {
+lib.contentElement {
     templateRootPaths {
         100 = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Replace/
     }
@@ -68,11 +68,5 @@ plugin.tx_ws_textmedia_bootstrap._CSS_DEFAULT_STYLE (
     .ce-gallery.ce-intext.ce-left {
         float: left;
         z-index: 999;
-    }
-    @media (max-width: 991px) {
-        .ce-gallery.ce-intext.ce-right,
-        .ce-gallery.ce-intext.ce-left {
-            float: none;
-        }
     }
 )
