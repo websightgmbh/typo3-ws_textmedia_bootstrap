@@ -16,8 +16,8 @@ $EM_CONF[$_EXTKEY] = [
     'version'          => '2.1.2',
     'constraints'      => [
         'depends'   => [
-            'typo3' => '8.6.0-8.7.99',
-            'fluid_styled_content' => '',
+            'typo3' => '9.5.0-9.5.99',
+            'fluid_styled_content' => '9.5.0-9.5.99',
             'fluid_styled_responsive_images' => '',
         ],
         'conflicts' => [],
