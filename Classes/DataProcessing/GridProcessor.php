@@ -38,7 +38,8 @@ class GridProcessor implements DataProcessorInterface
      * @var array
      */
     protected $defaultProcessorConfiguration = [
-        'bootstrap_grid_size' => '12'
+        'bootstrap_grid_size' => '12',
+        'gallery_float_breakpoint' => 'md'
     ];
 
     /**
@@ -65,25 +66,29 @@ class GridProcessor implements DataProcessorInterface
 
         $processorConfiguration = array_merge($this->defaultProcessorConfiguration, $processorConfiguration);
 
+        $gridSize = (int)$processorConfiguration['bootstrap_grid_size'];
+        $columnType = 'col-' . $processorConfiguration['gallery_float_breakpoint'] . '-';
+
         $imageColumnSize = (int)$processedData['data']['ws_textmedia_bootstrap_image_size'];
         $imageColumnSizeLeftover = ($imageColumnSize ? (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize : 0);
         $imageColumnSizeLeftoverHalf = ($imageColumnSizeLeftover ? floor($imageColumnSizeLeftover / 2) : 0);
 
-        $textColumnSize = (int)$processorConfiguration['bootstrap_grid_size'] - $imageColumnSize;
+        $textColumnSize = (int)$gridSize - $imageColumnSize;
 
         // Prevent division by zero
         if ((int)$processedData['gallery']['count']['columns'] <= 0) {
             $processedData['gallery']['count']['columns'] = 1;
         }
-        $galleryColumnSize = floor((int)$processorConfiguration['bootstrap_grid_size'] / $processedData['gallery']['count']['columns']);
+        $galleryColumnSize = floor((int)$gridSize / $processedData['gallery']['count']['columns']);
 
         $processedData['grid'] = [
             'classes' => [
-                'textcol'  => ($textColumnSize ? 'col-md-' . $textColumnSize : 'col-md-12'),
-                'imagecol' => ($imageColumnSize ? 'col-md-' . $imageColumnSize : 'col-md-12'),
-                'imagecol_offset_leftover' => ($imageColumnSizeLeftover ? ' col-md-offset-' . $imageColumnSizeLeftover : ''),
-                'imagecol_offset_leftover_half' => ($imageColumnSizeLeftoverHalf > 0 ? ' col-md-offset-' . $imageColumnSizeLeftoverHalf : ''),
-                'gallerycol' => ($galleryColumnSize ? 'col-md-' . $galleryColumnSize : 'col-md-12')
+                'textcol'  => ($textColumnSize ? $columnType . $textColumnSize : $columnType . $gridSize),
+                'imagecol' => ($imageColumnSize ? $columnType . $imageColumnSize : $columnType . $gridSize),
+                'imagecol_offset_leftover' => ($imageColumnSizeLeftover ? ' ' . $columnType . 'offset-' . $imageColumnSizeLeftover : ''),
+                'imagecol_offset_leftover_half' => ($imageColumnSizeLeftoverHalf > 0 ? ' ' . $columnType . 'offset-' . $imageColumnSizeLeftoverHalf : ''),
+                'gallerycol' => ($galleryColumnSize ? $columnType . $galleryColumnSize : $columnType . $gridSize),
+                'colmaxsize' => $columnType.$gridSize
             ],
             'wrap_element_uid' => $processorConfiguration['wrap_element_uid'],
             'max_image_width' => $processorConfiguration['max_image_width']

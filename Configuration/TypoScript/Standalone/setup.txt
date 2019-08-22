@@ -23,6 +23,7 @@ tt_content {
                 bootstrap_grid_size = {$plugin.tx_ws_textmedia_bootstrap.settings.bootstrap_grid_size}
                 wrap_element_uid = {$plugin.tx_ws_textmedia_bootstrap.settings.wrap_element_uid}
                 max_image_width = {$plugin.tx_ws_textmedia_bootstrap.settings.max_image_width}
+                gallery_float_breakpoint = {$plugin.tx_ws_textmedia_bootstrap.settings.gallery_float_breakpoint}
             }
         }
 
