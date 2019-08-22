@@ -11,9 +11,11 @@ if (TYPO3_MODE === 'BE') {
     call_user_func(
         function ($extKey) {
             // Get the extension configuration
-            $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extKey]);
+            $extConfLoadContentElementWizardTsConfig = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+                \TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class
+            )->get($extKey, 'loadContentElementWizardTsConfig');
 
-            if (!isset($extConf['loadContentElementWizardTsConfig']) || (int)$extConf['loadContentElementWizardTsConfig'] === 1) {
+            if ((int)$extConfLoadContentElementWizardTsConfig === 1) {
                 // Include new content elements to modWizards
                 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ws_textmedia_bootstrap/Configuration/PageTSconfig/NewContentElementWizard.typoscript">');
             }
