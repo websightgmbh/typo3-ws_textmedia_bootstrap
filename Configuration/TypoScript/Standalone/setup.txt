@@ -47,32 +47,32 @@ plugin.tx_responsiveimages.settings.configuration {
                 media = (-webkit-min-device-pixel-ratio: 1.9), (min-resolution: 1.9dppx)
                 croppingVariantKey = default
                 sizes {
-                    1260w {
+                    2520w {
                         width = 2520
                         height =
                         quality = 40
                     }
-                    960w {
+                    1920w {
                         width = 1920
                         height =
                         quality = 40
                     }
-                    720w {
+                    1440w {
                         width = 1440
                         height =
                         quality = 40
                     }
-                    640w {
+                    1280w {
                         width = 1280
                         height =
                         quality = 40
                     }
-                    360w {
+                    720w {
                         width = 720
                         height =
                         quality = 40
                     }
-                    320w {
+                    640w {
                         width = 640
                         height =
                         quality = 40
