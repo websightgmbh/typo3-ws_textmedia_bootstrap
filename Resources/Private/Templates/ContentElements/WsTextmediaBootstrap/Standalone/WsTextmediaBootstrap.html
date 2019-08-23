@@ -122,7 +122,7 @@
 						<div class="{grid.classes.imagecol} ce-gallery{f:if(condition: data.imageborder, then: ' ce-border')} ce-intext ce-right" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
 							<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
 						</div>
-						<div class="col-md-12 ce-bodytext ce-intext">
+						<div class="{grid.classes.colmaxsize} ce-bodytext ce-intext">
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 						<div class="{grid.classes.imagecol} ce-gallery{f:if(condition: data.imageborder, then: ' ce-border')} ce-intext ce-left" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
 							<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
 						</div>
-						<div class="col-md-12 ce-bodytext ce-intext">
+						<div class="{grid.classes.colmaxsize} ce-bodytext ce-intext">
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 					</div>
@@ -174,7 +174,7 @@
 					</div>
 				</div>
 			</f:case>
-			<f:case default="TRUE">
+			<f:defaultCase>
 				<div class="ce-textpic">
 					<div class="row">
 						<div class="col-md-8 ce-bodytext">
@@ -185,7 +185,7 @@
 						</div>
 					</div>
 				</div>
-			</f:case>
+			</f:defaultCase>
 		</f:switch>
 
 	</f:then>

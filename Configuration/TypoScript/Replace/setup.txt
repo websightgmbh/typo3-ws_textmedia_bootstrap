@@ -1,4 +1,9 @@
-lib.fluidContent {
+page.includeJS {
+    responsiveImagesLazysizes = https://cdn.jsdelivr.net/npm/lazysizes@5/lazysizes.min.js
+    responsiveImagesLazysizes.external = 1
+}
+
+lib.contentElement {
     templateRootPaths {
         100 = EXT:ws_textmedia_bootstrap/Resources/Private/Templates/ContentElements/WsTextmediaBootstrap/Replace/
     }
@@ -14,43 +19,90 @@ tt_content.textmedia {
             bootstrap_grid_size = {$plugin.tx_ws_textmedia_bootstrap.settings.bootstrap_grid_size}
             wrap_element_uid = {$plugin.tx_ws_textmedia_bootstrap.settings.wrap_element_uid}
             max_image_width = {$plugin.tx_ws_textmedia_bootstrap.settings.max_image_width}
+            gallery_float_breakpoint = {$plugin.tx_ws_textmedia_bootstrap.settings.gallery_float_breakpoint}
         }
     }
+}
 
-    settings {
-        responsive_image_rendering {
-            layoutKey = srcset
-
-            # Example SourceCollection, overwrite to your needs...
-            sourceCollection {
-                10 {
-                    width = 1260m
-                    srcset = 1260w
+plugin.tx_responsiveimages.settings.configuration {
+    default {
+    }
+    lazysizes {
+        layoutKey = data-srcset
+        defaultWidth = 320
+        defaultHeight =
+        # Example SourceCollection, overwrite to your needs...
+        sources {
+            highres {
+                media = (-webkit-min-device-pixel-ratio: 1.9), (min-resolution: 1.9dppx)
+                croppingVariantKey = default
+                sizes {
+                    2520w {
+                        width = 2520
+                        height =
+                        quality = 40
+                    }
+                    1920w {
+                        width = 1920
+                        height =
+                        quality = 40
+                    }
+                    1440w {
+                        width = 1440
+                        height =
+                        quality = 40
+                    }
+                    1280w {
+                        width = 1280
+                        height =
+                        quality = 40
+                    }
+                    720w {
+                        width = 720
+                        height =
+                        quality = 40
+                    }
+                    640w {
+                        width = 640
+                        height =
+                        quality = 40
+                    }
                 }
-
-                20 {
-                    width = 960m
-                    srcset = 960w
-                }
-
-                30 {
-                    width = 720m
-                    srcset = 720w
-                }
-
-                40 {
-                    width = 640m
-                    srcset = 640w
-                }
-
-                50 {
-                    width = 360m
-                    srcset = 360w
-                }
-
-                60 {
-                    width = 320m
-                    srcset = 320w
+            }
+            default {
+                media =
+                croppingVariantKey = default
+                sizes {
+                    1260w {
+                        width = 1260
+                        height =
+                        quality = 80
+                    }
+                    960w {
+                        width = 960
+                        height =
+                        quality = 80
+                    }
+                    720w {
+                        width = 720
+                        height =
+                        quality = 80
+                    }
+                    640w {
+                        width = 640
+                        height =
+                        quality = 80
+                    }
+                    360w {
+                        width = 360
+                        height =
+                        quality = 80
+                    }
+                    320w {
+                        width = 320
+                        height =
+                        quality = 80
+                    }
                 }
             }
         }
