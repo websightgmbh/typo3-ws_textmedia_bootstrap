@@ -149,6 +149,7 @@
 				<div class="ce-textpic">
 					<div class="row">
 						<div class="{grid.classes.textcol} ce-bodytext">
+							<f:render partial="Header/All" arguments="{_all}" />
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 						<div class="{grid.classes.imagecol} ce-gallery{f:if(condition: data.imageborder, then: ' ce-border')} ce-besidetext ce-right" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
@@ -167,6 +168,7 @@
 							<f:render partial="BootstrapMediaGallery" arguments="{_all}"/>
 						</div>
 						<div class="{grid.classes.textcol} ce-bodytext">
+							<f:render partial="Header/All" arguments="{_all}" />
 							<f:format.html>{data.bodytext}</f:format.html>
 						</div>
 					</div>
@@ -188,9 +190,25 @@
 
 	</f:then>
 	<f:else>
-		<div class="ce-bodytext">
-			<f:format.html>{data.bodytext}</f:format.html>
-		</div>
+		<f:if condition="{data.bodytext}">
+			<f:then>
+				<div class="ce-bodytext">
+					<f:if condition="{gallery.position.noWrap}">
+						<f:render partial="Header/All" arguments="{_all}" />
+					</f:if>
+					<f:format.html>{data.bodytext}</f:format.html>
+				</div>
+			</f:then>
+			<f:else>
+				<f:if condition="{gallery.position.noWrap}">
+					<f:if condition="{data.header}">
+						<div class="ce-bodytext">
+							<f:render partial="Header/All" arguments="{_all}" />
+						</div>
+					</f:if>
+				</f:if>
+			</f:else>
+		</f:if>
 	</f:else>
 </f:if>
 
