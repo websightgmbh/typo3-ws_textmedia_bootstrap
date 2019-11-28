@@ -5,14 +5,14 @@
   "license": "GPL3",
   "authors": [
     {
-      "name": "Cedric Ziel",
-      "email": "ziel@websight.de"
+      "name": "Tilman Schlereth, Cedric Ziel",
+      "email": "schlereth@websight.de"
     }
   ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.5.0",
-    "typo3/cms": "~8.6.0",
+    "typo3/cms": "^8.7.0",
     "typo3/cms-fluid-styled-content": "*",
     "schnitzler/fluid-styled-responsive-images": "*"
   },
