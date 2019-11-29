@@ -8,5 +8,8 @@ plugin.tx_ws_textmedia_bootstrap {
 
         # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=int+; label=Set the max image width for the renderer.
         max_image_width = 1280
+
+        # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=boolean; label=Define, if the caption of a single image is linked (per default the image itself is linked).
+        link_captions = 0
     }
 }

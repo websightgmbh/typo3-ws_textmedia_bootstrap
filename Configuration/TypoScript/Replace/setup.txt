@@ -18,6 +18,7 @@ tt_content.textmedia {
     }
 
     settings {
+        link_captions = {$plugin.tx_ws_textmedia_bootstrap.settings.link_captions}
         responsive_image_rendering {
             layoutKey = srcset
 

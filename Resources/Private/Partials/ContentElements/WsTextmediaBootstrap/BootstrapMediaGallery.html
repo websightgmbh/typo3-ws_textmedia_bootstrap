@@ -29,7 +29,23 @@
 						<f:if condition="{column.media.description}">
 							<f:then>
 									<figcaption>
-										{column.media.description}
+										<f:if condition="{settings.link_captions}">
+											<f:then>
+												<f:if condition="{column.media.link}">
+													<f:then>
+														<f:link.typolink parameter="{column.media.link}">
+															{column.media.description}
+														</f:link.typolink>
+													</f:then>
+													<f:else>
+														{column.media.description}
+													</f:else>
+												</f:if>
+											</f:then>
+											<f:else>
+												{column.media.description}
+											</f:else>
+										</f:if>
 									</figcaption>
 								</figure>
 							</f:then>
@@ -44,9 +60,25 @@
 <f:section name="imageType">
 	<f:if condition="{column.media.link}">
 		<f:then>
-			<f:link.typolink parameter="{column.media.link}">
-				<f:render section="image" arguments="{_all}" />
-			</f:link.typolink>
+			<f:if condition="{settings.link_captions}">
+				<f:then>
+					<f:if condition="{data.image_zoom}">
+						<f:then>
+							<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
+								<f:render section="image" arguments="{_all}" />
+							</ce:link.clickEnlarge>
+						</f:then>
+						<f:else>
+							<f:render section="image" arguments="{_all}" />
+						</f:else>
+					</f:if>
+				</f:then>
+				<f:else>
+					<f:link.typolink parameter="{column.media.link}">
+						<f:render section="image" arguments="{_all}" />
+					</f:link.typolink>
+				</f:else>
+			</f:if>
 		</f:then>
 		<f:else>
 			<f:if condition="{data.image_zoom}">
