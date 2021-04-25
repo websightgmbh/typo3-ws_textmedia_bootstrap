@@ -7,17 +7,9 @@ defined('TYPO3_MODE') or die();
         = Websight\WsTextmediaBootstrap\Preview\WsTextmediaPreviewRenderer::class;
 
     if (TYPO3_MODE === 'BE') {
-        call_user_func(
-            function ($extKey) {
-                // Get the extension configuration
-                $extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$extKey]);
-
-                if (!isset($extConf['loadContentElementWizardTsConfig']) || (int)$extConf['loadContentElementWizardTsConfig'] === 1) {
-                    // Include new content elements to modWizards
-                    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ws_textmedia_bootstrap/Configuration/PageTSconfig/NewContentElementWizard.typoscript">');
-                }
-            },
-            $_EXTKEY
-        );
+        // Include new content elements to modWizards
+        if ((bool)TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)->get('ws_textmedia_bootstrap', 'loadContentElementWizardTsConfig') === true) {
+            TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ws_textmedia_bootstrap/Configuration/PageTSconfig/NewContentElementWizard.typoscript">');
+        }
     }
 })();
