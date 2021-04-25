@@ -1,2 +1,2 @@
-# cat=basic//; type=boolean; label=LLL:EXT:fluid_styled_content/Resources/Private/Language/locallang_em.xlf:fluid_styled_content.config.loadContentElementWizardTsConfig
+# cat=basic//; type=boolean; label=Load Page TSconfig with "New Content Element Wizard" definitions. The definitions can also be loaded manually by including it in a page.
 loadContentElementWizardTsConfig = 1
