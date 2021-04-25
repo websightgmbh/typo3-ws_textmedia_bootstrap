@@ -14,7 +14,7 @@
     "php": ">=7.2.0",
     "typo3/cms": "^9.5.0",
     "typo3/cms-fluid-styled-content": "*",
-    "schnitzler/fluid-styled-responsive-images": "*"
+    "schnitzler/fluid-styled-responsive-images": "^9.5.0"
   },
   "replace": {
     "ws_textmedia_bootstrap": "self.version",

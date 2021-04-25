@@ -9,7 +9,7 @@ $EM_CONF[$_EXTKEY] = [
         'depends' => [
             'typo3' => '9.5.0-9.5.99',
             'fluid_styled_content' => '',
-            'fluid_styled_responsive_images' => '',
+            'fluid_styled_responsive_images' => '9.5.0-9.5.99',
         ],
     ],
     'state' => 'beta',
