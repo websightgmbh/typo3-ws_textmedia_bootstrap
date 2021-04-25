@@ -11,6 +11,14 @@ Text with Media elements. Both a `standalone` element that adds a new element
 By default, the standalone variant will be placed in the new content 
 element wizard as well. Disable this behaviour in the extension manager.
 
+## Version 4.0.0
+
+One and only version for TYPO3 9LTS. Works together with fluid_styled_responsive_images 9.5.x.
+
+## Version 3.0.0
+
+One and only version for TYPO3 8LTS. Works together with fluid_styled_responsive_images 8.7.x.
+
 ## Version 2.1.0
 
 * the extension depends on EXT:fluid_styled_responsive_images now to provide
