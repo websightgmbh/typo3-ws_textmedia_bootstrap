@@ -3,40 +3,33 @@ defined('TYPO3_MODE') or die();
 
 $languageFilePrefix = 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/locallang_db.xlf:ws_textmedia_bootstrap.';
 
-$textMediaElementNames = [
-    'wstextmediabootstrap' => 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/locallang_db.xlf:ws_textmedia_bootstrap.ce_wizard.title',
-];
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['wstextmediabootstrap'] = 'mimetypes-x-content-text-media';
 
-foreach ($textMediaElementNames as $element => $label) {
+// Add CType 'wstextmediabootstrap'
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        $languageFilePrefix . 'ce_wizard.title',
+        'wstextmediabootstrap',
+        'content-textmedia'
+    ],
+    'header',
+    'after'
+);
 
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes'][$element] = 'mimetypes-x-content-text-media';
+$GLOBALS['TCA']['tt_content']['types']['wstextmediabootstrap'] = array_merge_recursive(
+    $GLOBALS['TCA']['tt_content']['types']['textmedia'],
+    [
 
-    // Add the CType $element
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        [
-            $label,
-            $element,
-            'content-textpic'
-        ],
-        'header',
-        'after'
-    );
+    ]
+);
 
-    $GLOBALS['TCA']['tt_content']['types'][$element] = array_merge_recursive(
-        $GLOBALS['TCA']['tt_content']['types']['textmedia'],
-        [
-
-        ]
-    );
-
-    // Add category tab when categories column exits
-    if (!empty($GLOBALS['TCA']['tt_content']['columns']['categories'])) {
-        $GLOBALS['TCA']['tt_content']['types'][$element]['showitem'] .=
-            ',--div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,
-            categories';
-    }
+// Add category tab when categories column exits
+if (!empty($GLOBALS['TCA']['tt_content']['columns']['categories'])) {
+    $GLOBALS['TCA']['tt_content']['types']['wstextmediabootstrap']['showitem'] .=
+        ',--div--;LLL:EXT:lang/locallang_tca.xlf:sys_category.tabs.category,
+        categories';
 }
 
 /*
@@ -52,11 +45,11 @@ $GLOBALS['TCA']['tt_content']['palettes']['gridSettings'] = [
 $ttContentColumns = [
     'ws_textmedia_bootstrap_image_size' => [
         'exclude' => 1,
-        'label'   => $languageFilePrefix . 'col.ws_textmedia_bootstrap_image_size',
-        'config'  => [
-            'type'       => 'select',
+        'label' => $languageFilePrefix . 'col.ws_textmedia_bootstrap_image_size',
+        'config' => [
+            'type' => 'select',
             'renderType' => 'selectSingle',
-            'items'      => [
+            'items' => [
                 [
                     '',
                     '0'
@@ -110,7 +103,7 @@ $ttContentColumns = [
                     '12'
                 ],
             ],
-            'default'    => 6
+            'default' => 6
         ]
     ],
 ];
