@@ -1,15 +1,15 @@
 plugin.tx_ws_textmedia_bootstrap {
     settings {
-        # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=int+; label=By default bootstrap uses a 12 column grid. Adjust if needed.
+        # cat=plugin.tx_ws_textmedia_bootstrap//a; type=int+; label=By default bootstrap uses a 12 column grid. Adjust if needed.
         bootstrap_grid_size = 12
 
-        # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=boolean; label=Wrap every content element with it's UID.
+        # cat=plugin.tx_ws_textmedia_bootstrap//a; type=boolean; label=Wrap every content element with it's UID.
         wrap_element_uid = 0
 
-        # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=int+; label=Set the max image width for the renderer.
+        # cat=plugin.tx_ws_textmedia_bootstrap//a; type=int+; label=Set the max image width for the renderer.
         max_image_width = 1280
 
-        # cat=plugin.tx_tx_ws_textmedia_bootstrap//a; type=boolean; label=Define, if the caption of a single image is linked (per default the image itself is linked).
+        # cat=plugin.tx_ws_textmedia_bootstrap//a; type=boolean; label=Define, if the caption of a single image is linked (per default the image itself is linked).
         link_captions = 0
     }
 }
