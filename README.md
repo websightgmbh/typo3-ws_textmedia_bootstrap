@@ -9,7 +9,8 @@ Text with Media elements. Both a `standalone` element that adds a new element
 "Text & Media - Bootstrap" and a `replace` option are available.
 
 By default, the standalone variant will be placed in the new content 
-element wizard as well. Disable this behaviour in the extension manager.
+element wizard as well. Disable this behaviour in the global extension 
+configuration in the install tool if needed.
 
 ## Version 4.0.0
 
