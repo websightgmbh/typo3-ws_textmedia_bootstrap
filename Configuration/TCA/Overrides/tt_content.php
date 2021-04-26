@@ -3,10 +3,10 @@ defined('TYPO3_MODE') or die();
 
 call_user_func(function () {
 
-    $languageFilePrefix = 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.';
+    $languageFilePrefix = 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/locallang_db.xlf:ws_textmedia_bootstrap.';
 
     $textMediaElementNames = [
-        'wstextmediabootstrap' => 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.ce_wizard.title',
+        'wstextmediabootstrap' => 'LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/locallang_db.xlf:ws_textmedia_bootstrap.ce_wizard.title',
     ];
 
     foreach ($textMediaElementNames as $element => $label) {
