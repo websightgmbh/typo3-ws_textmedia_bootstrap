@@ -1,22 +1,20 @@
 <?php
 defined('TYPO3_MODE') or die();
 
-call_user_func(function ($extKey) {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extKey,
-        'Configuration/TypoScript/Replace',
-        'Bootstrap Textmedia: Replace'
-    );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'ws_textmedia_bootstrap',
+    'Configuration/TypoScript/Replace',
+    'Textmedia Bootstrap: Replace'
+);
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extKey,
-        'Configuration/TypoScript/Standalone',
-        'Bootstrap Textmedia: Standalone'
-    );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+    'ws_textmedia_bootstrap',
+    'Configuration/TypoScript/Standalone',
+    'Textmedia Bootstrap: Standalone'
+);
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        $extKey,
-        'Configuration/PageTSconfig/NewContentElementWizard.typoscript',
-        'Bootstrap Textmedia: New Content Element Wizard Items (Standalone)'
-    );
-}, 'ws_textmedia_bootstrap');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    'ws_textmedia_bootstrap',
+    'Configuration/PageTSconfig/NewContentElementWizard.typoscript',
+    'Textmedia Bootstrap: New Content Element Wizard Items (Standalone)'
+);
