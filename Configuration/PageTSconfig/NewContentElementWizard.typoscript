@@ -3,8 +3,8 @@
 mod.wizards.newContentElement.wizardItems {
     common.elements {
         wstextmediabootstrap {
-            iconIdentifier = content-textpic
-            title = LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/Database.xlf:ws_textmedia_bootstrap.ce_wizard.title
+            iconIdentifier = content-textmedia
+            title = LLL:EXT:ws_textmedia_bootstrap/Resources/Private/Language/locallang_db.xlf:ws_textmedia_bootstrap.ce_wizard.title
             description = LLL:EXT:backend/Resources/Private/Language/locallang_db_new_content_el.xlf:common_textMedia_description
             tt_content_defValues {
                 CType = wstextmediabootstrap
