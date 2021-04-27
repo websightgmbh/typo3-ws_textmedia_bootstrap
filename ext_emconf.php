@@ -3,13 +3,13 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Text & Media Element for Bootstrap 3',
     'description' => 'Fluid Styled Content overlay and standalone template for Text & Media',
-    'version' => '4.0.0',
+    'version' => '5.0.0',
     'category' => 'plugin',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-9.5.99',
+            'typo3' => '10.4.0-10.4.99',
             'fluid_styled_content' => '',
-            'fluid_styled_responsive_images' => '9.5.0-9.5.99',
+            'fluid_styled_responsive_images' => '10.4.0-10.4.99',
         ],
     ],
     'state' => 'beta',
